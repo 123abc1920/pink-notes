@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/delete_icon"
+        android:id="@+id/delete_graph"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/save_from_graph"
+        android:icon="@drawable/tick_icon"
+        android:title=""
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+</menu>

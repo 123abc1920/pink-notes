@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyCuteApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimaryDark">@color/pink</item>
+        <item name="android:navigationBarColor">@color/pink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorButtonNormal">@color/white</item>
+        <item name="popupMenuBackground">@color/pink</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:tint">@color/white</item>
+        <item name="titleTextColor">@color/white</item>
+
+        <item name="android:itemTextAppearance">@style/MenuStyle</item>
+        <item name="android:textSize">@dimen/sp1</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="toolbarStyle">@style/MyToolBar</item>
+        <item name="android:textViewStyle">@style/MyTextStyle</item>
+        <item name="android:editTextColor">@color/pink</item>
+    </style>
+
+    <style name="Base.Theme.MyCuteApplication.Blue" parent="Base.Theme.MyCuteApplication">
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="android:navigationBarColor">@color/blue</item>
+        <item name="popupMenuBackground">@color/blue</item>
+
+        <item name="android:alertDialogTheme">@style/DialogTheme.Blue</item>
+        <item name="toolbarStyle">@style/MyToolBar.Blue</item>
+        <item name="android:textViewStyle">@style/MyTextStyle.Blue</item>
+        <item name="android:editTextColor">@color/blue</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textSize">30sp</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/Button</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Button</item>
+        <item name="android:windowTitleStyle">@style/TitleDialog</item>
+    </style>
+
+    <style name="DialogTheme.Blue" parent="DialogTheme">
+        <item name="android:buttonBarPositiveButtonStyle">@style/Button.Blue</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/Button.Blue</item>
+        <item name="android:windowTitleStyle">@style/TitleDialog.Blue</item>
+    </style>
+
+    <style name="Theme.MyCuteApplication" parent="Base.Theme.MyCuteApplication" />
+</resources>

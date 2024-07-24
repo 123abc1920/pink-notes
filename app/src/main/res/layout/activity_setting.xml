@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Setting">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_set"
+        app:title="Настройки" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Размер текста:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/size1"
+            style="@style/Widget.AppCompat.DrawerArrowToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textColor="@color/grey"
+            android:textOff="1"
+            android:textOn="1"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/size2"
+            style="@style/Widget.AppCompat.DrawerArrowToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textColor="@color/grey"
+            android:textOff="2"
+            android:textOn="2"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/size3"
+            style="@style/Widget.AppCompat.DrawerArrowToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textColor="@color/grey"
+            android:textOff="3"
+            android:textOn="3"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Пример текста" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Сменить тему:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/theme1"
+            style="@style/Widget.AppCompat.DrawerArrowToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:checked="false"
+            android:textColor="@color/white"
+            android:textOff="Pink"
+            android:textOn="Pink"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/theme2"
+            style="@style/Widget.AppCompat.DrawerArrowToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:checked="false"
+            android:textColor="@color/white"
+            android:textOff="Blue"
+            android:textOn="Blue"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
