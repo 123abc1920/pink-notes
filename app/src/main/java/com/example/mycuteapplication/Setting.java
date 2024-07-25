@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.graphics.BlendMode;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -68,8 +73,10 @@ public class Setting extends AppCompatActivity {
 
         if (theme.equals("pink")) {
             theme1.setChecked(true);
+            theme1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(181, 184, 177)));
         } else if (theme.equals("blue")) {
             theme2.setChecked(true);
+            theme2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(181, 184, 177)));
         }
 
         size1.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -105,6 +112,10 @@ public class Setting extends AppCompatActivity {
         theme1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 theme2.setChecked(false);
+                theme2.setBackgroundTintList(null);
+                theme1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(181, 184, 177)));
+                Toast toast = Toast.makeText(this, "Тема изменится после выхода из настроек", Toast.LENGTH_LONG);
+                toast.show();
 
                 theme = "pink";
             }
@@ -113,6 +124,10 @@ public class Setting extends AppCompatActivity {
         theme2.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 theme1.setChecked(false);
+                theme1.setBackgroundTintList(null);
+                theme2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(181, 184, 177)));
+                Toast toast = Toast.makeText(this, "Тема изменится после выхода из настроек", Toast.LENGTH_LONG);
+                toast.show();
 
                 theme = "blue";
             }

@@ -48,6 +48,7 @@ public class ListEdit extends AppCompatActivity {
 
         title = findViewById(R.id.title_list);
         listText = findViewById(R.id.list_name);
+        listText.setTextSize(TypedValue.COMPLEX_UNIT_SP, MainActivity.textSize);
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, MainActivity.textSize);
 
         if (MainActivity.old) {

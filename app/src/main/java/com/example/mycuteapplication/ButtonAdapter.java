@@ -33,6 +33,7 @@ public class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ViewHolder
         private TextView text, name, type;
         private LinearLayout background;
         private MainElement element;
+        private static final double MIN_SIZE = 45.3, MAX_SIZE = 30.65;
 
         ViewHolder(View view) {
             super(view);
@@ -49,10 +50,17 @@ public class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ViewHolder
             text.setTextColor(MainActivity.maincolor);
             name.setTextColor(Color.WHITE);
 
-            type.setTextSize((float) (MainActivity.displayWidth / 45.3));
-            name.setTextSize((float) (MainActivity.displayWidth / 45.3));
+            double increase_value = 1;
+            if (MainActivity.textSize == 40) {
+                increase_value = 1.25;
+            } else if (MainActivity.textSize == 50) {
+                increase_value = 1.5;
+            }
 
-            text.setTextSize((float) (MainActivity.displayWidth / 30.65));
+            type.setTextSize((float) (MainActivity.displayWidth / (MIN_SIZE / increase_value)));
+            name.setTextSize((float) (MainActivity.displayWidth / (MIN_SIZE / increase_value)));
+            text.setTextSize((float) (MainActivity.displayWidth / (MAX_SIZE / increase_value)));
+
             background.setBackgroundColor(MainActivity.maincolor);
         }
     }
@@ -199,16 +207,16 @@ public class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ViewHolder
             });
         }
 
-        String text = "";
+        StringBuilder text = new StringBuilder();
         if (e.type.equals(TypesOfFiles.LIST)) {
             for (String s : e.checkBoxes) {
-                text += s + "; ";
+                text.append(s).append("; ");
             }
         } else {
-            text = e.text;
+            text = new StringBuilder(e.text);
         }
 
-        holder.text.setText(text);
+        holder.text.setText(text.toString());
         holder.name.setText(e.name);
 
         if (e.type.equals(TypesOfFiles.WRITE)) {
