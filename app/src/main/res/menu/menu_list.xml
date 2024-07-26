@@ -6,20 +6,20 @@
         android:id="@+id/delete_list"
         android:icon="@drawable/delete_icon"
         android:orderInCategory="2"
-        android:title=""
+        android:title="Удалить"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/preference_list"
         android:icon="@drawable/setting_icon"
         android:orderInCategory="2"
-        android:title=""
+        android:title="Настройки"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/save_list"
         android:icon="@drawable/tick_icon"
         android:orderInCategory="2"
-        android:title=""
+        android:title="Сохранить"
         app:showAsAction="always" />
 </menu>

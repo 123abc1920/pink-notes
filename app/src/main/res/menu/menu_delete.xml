@@ -5,6 +5,7 @@
         android:id="@+id/accept_delete"
         android:icon="@drawable/delete_icon"
         android:orderInCategory="2"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:title="Удалить" />
 
 </menu>

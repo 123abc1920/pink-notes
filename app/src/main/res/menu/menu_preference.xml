@@ -6,7 +6,7 @@
         android:id="@+id/save_from_prefs"
         android:icon="@drawable/tick_icon"
         android:orderInCategory="1"
-        android:title=""
+        android:title="Сохранить"
         app:showAsAction="always" />
 
 </menu>

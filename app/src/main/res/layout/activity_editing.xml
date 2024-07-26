@@ -26,6 +26,19 @@
         android:maxLines="1"
         android:scrollbars="horizontal" />
 
+    <EditText
+        android:id="@+id/text_editing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        android:allowUndo="true"
+        android:gravity="top"
+        android:hint="Текст"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,17 +95,5 @@
             android:textColor="@color/grey" />
 
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/text_editing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:allowUndo="true"
-        android:gravity="top"
-        android:hint="Текст"
-        android:imeOptions="actionDone"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical" />
 
 </LinearLayout>
